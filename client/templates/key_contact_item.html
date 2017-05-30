@@ -1,0 +1,14 @@
+<template name='Key_Contact_Item'>
+  <H1>Edit Key Contact</H1>
+  <form id='update_key_contact_form'>
+    <input type='text' value={{key_contact_name}} name='key_contact_name' placeholder="Name">
+    <input type='text' value={{key_contact_job}} name='key_contact_job' placeholder="Role">
+    <input type='text' value={{key_contact_address}} name='key_contact_address' placeholder="Address">
+    <input type='number' value={{key_contact_office}} name='key_contact_office' placeholder="Office">
+    <input type='number' value={{key_contact_mobile}} name='key_contact_mobile' placeholder="Mobile">
+    <input type='text' value={{key_contact_email}} name='key_contact_email' placeholder="Email">
+    <input type='submit' value='Update Key Contact Information' name='update_key_contact'>
+  </form>
+  <button class='information_button'><i class="fa fa-info-circle" aria-hidden="true"></i></button>
+  <button class='return_button'>Return</button>
+</template>

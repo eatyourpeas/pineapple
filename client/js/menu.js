@@ -20,7 +20,7 @@ Template.Menu.events({
     event.preventDefault();
     Router.go('emergency_protocol');
   },
-  'click #low-right': function(event, template){
+  'click #low-left': function(event, template){
     event.preventDefault();
     Router.go('key_contacts');
   },
@@ -29,4 +29,3 @@ Template.Menu.events({
     Router.go('appointments');
   }
 });
-

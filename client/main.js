@@ -101,6 +101,21 @@ Router.route('/appointment_item/:_id', {
   }
 });
 
+Router.route('/key_contacts', function () {
+  this.render('Key_Contacts');
+});
+
+Router.route('/key_contact_add', function () {
+  this.render('Key_Contact_Add');
+});
+
+Router.route('/key_contact_item/:_id', {
+  template: 'Key_Contact_Item',
+  data: function() {
+    return Appointments.findOne({_id: this.params._id});
+  }
+});
+
 Meteor.subscribe('medications');
 console.log(Medications.find().fetch());
 

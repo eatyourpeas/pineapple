@@ -1,0 +1,36 @@
+<template name='Key_Contacts'>
+  <H1>Key Contacts</H1>
+  {{#if thereAreNoKeyContacts}}
+    <H2>You have not added any key contacts.</H2>
+  {{else}}
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each key_contacts}}
+          <tr>
+            <td>{{key_contact_name}}</td>
+            <td>{{key_contact_job}}</td>
+            <td>{{key_contact_address}}</td>
+            <td>{{key_contact_office}}</td>
+            <td>{{key_contact_mobile}}</td>
+            <td>{{key_contact_email}}</td>
+            <td class='medication_notification'><i class="fa fa-bell" aria-hidden="true"></i></td>
+            <td class='information_icon'><i class="fa fa-info-circle" aria-hidden="true"></i></td>
+            <td id="edit_record"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+            <td id="delete_record"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+  <button id='return_button'>Back To Menu</button><br><br><div class="new_record"><i class="fa fa-plus" aria-hidden="true"></i></div>
+</template>
