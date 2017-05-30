@@ -296,3 +296,11 @@ h3 {
   display: table;
   text-vertical-align: middle;
 }
+
+.end_date_visible{
+  visibility: visible;
+}
+
+.end_date_hidden{
+  visibility: hidden;
+}

@@ -90,6 +90,17 @@ Router.route('/appointments', function () {
   this.render('Appointments');
 });
 
+Router.route('/appointment_add', function () {
+  this.render('Appointment_Add');
+});
+
+Router.route('/appointment_item/:_id', {
+  template: 'Appointment_Item',
+  data: function() {
+    return Appointments.findOne({_id: this.params._id});
+  }
+});
+
 Meteor.subscribe('medications');
 console.log(Medications.find().fetch());
 

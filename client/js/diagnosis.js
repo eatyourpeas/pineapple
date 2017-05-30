@@ -34,7 +34,7 @@ Template.Diagnosis.helpers({
     return Procedures.find().fetch();
   },
   'thereAreNoProcedures': function(){
-    if (Problems.find().count() < 1) {
+    if (Procedures.find().count() < 1) {
       return true;
     } else {
       return false;

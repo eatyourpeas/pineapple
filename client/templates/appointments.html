@@ -1,0 +1,36 @@
+<template name='Appointments'>
+  <h1>Appointments</h1>
+  {{#if thereAreNoAppointments}}
+    <H2>You have not added any appointments.</H2>
+  {{else}}
+    <table>
+      <thead>
+        <tr>
+          <th>Appointment</th>
+          <th>Clinician</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each appointments}}
+          <tr>
+            <td>{{appointment_name}}</td>
+            <td>{{appointment_clinician}}</td>
+            <td>{{appointment_date}}</td>
+            <td>{{appointment_time}}</td>
+            <td class='appointment_notification'><i class="fa fa-bell" aria-hidden="true"></i></td>
+            <td class='information_icon'><i class="fa fa-info-circle" aria-hidden="true"></i></td>
+            <td id="edit_record"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+            <td id="delete_record"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+  <button id='return_button'>Back To Menu</button><br><br><div class="new_record"><i class="fa fa-plus" aria-hidden="true"></i></div>
+</template>

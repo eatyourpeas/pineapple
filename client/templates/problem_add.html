@@ -2,7 +2,9 @@
   <H1>Add a Problem</H1>
   <form id='update_problem_form'>
     <input type='text' name='problem_name'>
-    <input type='text' name='problem_date'>
+    <input type='date' name='problem_start_date'>
+    <input type='date' name='problem_end_date' class={{visible}} id='problem_end_date'>
+    <label><input type='checkbox' id='active_problem' name='active_problem' checked='true'>ACTIVE</label>
     <input type='submit' name='update_problem' value='Add Problem'>
   </form>
   <button class='information_button'><i class="fa fa-info-circle" aria-hidden="true"></i></button>

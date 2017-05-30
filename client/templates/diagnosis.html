@@ -7,8 +7,8 @@
       <thead>
         <tr>
           <th>Diagnosis</th>
-          <th>Date</th>
-          <th></th>
+          <th>Start Date</th>
+          <th>End Date</th>
           <th></th>
           <th></th>
         </tr>
@@ -16,8 +16,9 @@
       <tbody>
         {{#each diagnoses}}
         <tr>
-          <td>{{diagnosis}}</td>
-          <td>{{diagnosis_date}}</td>
+          <td>{{diagnosis_name}}</td>
+          <td>{{diagnosis_start_date}}</td>
+          <td>{{diagnosis_end_date}}</td>
           <td class="edit_record" id='edit_diagnosis_button'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
           <td class="delete_record" id='delete_diagnosis_button'><i class="fa fa-trash-o" aria-hidden="true"></i></td>
         </tr>
@@ -44,7 +45,7 @@
       <tbody>
         {{#each problems}}
         <tr>
-          <td>{{problem}}</td>
+          <td>{{problem_name}}</td>
           <td>{{problem_start_date}}</td>
           <td>{{problem_end_date}}</td>
           <td class="edit_record" id='edit_problem_button'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
@@ -72,7 +73,7 @@
       <tbody>
         {{#each procedures}}
         <tr>
-          <td>{{procedure}}</td>
+          <td>{{procedure_name}}</td>
           <td>{{procedure_date}}</td>
           <td class="edit_record" id='edit_procedure_button'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
           <td class="delete_record" id='delete_procedure_button'><i class="fa fa-trash-o" aria-hidden="true"></i></td>
