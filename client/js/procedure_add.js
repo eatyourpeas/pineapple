@@ -18,6 +18,7 @@ Template.Procedure_Add.events({
     console.log('called update procedure: '+ procedureName + ' '+ procedureDate);
 
     Procedures.insert({
+      procedure_user: Meteor.userId(),
       procedure_name: procedureName,
       procedure_date: procedureDate
     });

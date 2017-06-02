@@ -22,6 +22,7 @@ Template.Key_Contact_Add.events({
     var keyContactEmail = event.target.key_contact_email.value;
 
     KeyContacts.insert({
+      key_contact_user: Meteor.userId(),
       key_contact_name: keyContactName,
       key_contact_job: keyContactJob,
       key_contact_address: keyContactAddress,

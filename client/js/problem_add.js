@@ -20,6 +20,7 @@ Template.Problem_Add.events({
     }
 
     Problems.insert({
+      problem_user: Meteor.userId(),
       problem_name: problemName,
       problem_start_date: problemStartDate,
       problem_end_date: problemEndDate,

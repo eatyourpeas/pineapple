@@ -17,6 +17,7 @@ Template.Diagnosis_Add.events({
     var diagnosisEnd = event.target.diagnosis_end_date.value;
 
     Diagnoses.insert({
+      diagnosis_user: Meteor.userId(),
       diagnosis_name: diagnosisName,
       diagnosis_start_date: diagnosisStart,
       diagnosis_end_date: diagnosisEnd,

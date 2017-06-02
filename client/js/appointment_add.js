@@ -20,6 +20,7 @@ Template.Appointment_Add.events({
     var appointmentTime = event.target.appointment_time.value;
 
     Appointments.insert({
+      appointment_user: Meteor.userId(),
       appointment_name: appointmentName,
       appointment_clinician: appointmentClinician,
       appointment_date: appointmentDate,

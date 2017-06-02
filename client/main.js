@@ -4,6 +4,14 @@ import '../databases.js';
 
 import './main.html';
 
+/*
+Router.onBeforeAction(function() {
+    if (!Meteor.user()) {
+        this.render('Intro');
+    }
+});
+*/
+
 Router.route('/', function () {
   this.render('Intro');
 });
@@ -29,8 +37,6 @@ Router.route('/medication_item/:_id',{
     data: function() {
       return Medications.findOne({_id: this.params._id});
     }
-    //  return Medications.findOne(this.params._id);
-
 });
 
 Router.route('/medication_add', function(){
@@ -116,8 +122,6 @@ Router.route('/key_contact_item/:_id', {
   }
 });
 
-Meteor.subscribe('medications');
-console.log(Medications.find().fetch());
 
 
 

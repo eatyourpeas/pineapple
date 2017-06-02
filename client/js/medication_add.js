@@ -18,9 +18,10 @@ Template.Medication_Add.events({
     var medicineFrequency = event.target.medication_frequency.value;
     var medicineStart = event.target.medication_date.value;
 
-    console.log('hello '+ medicineName);
+    console.log('hello '+ medicineName + ' ' + Meteor.userId());
 
     Medications.insert({
+      medication_user: Meteor.userId(),
       medication_name: medicineName,
       medication_frequency: medicineFrequency,
       medication_date: medicineStart,
